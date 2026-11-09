@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0D0F17;
+  color: #FFFFFF;
+  overflow-x: hidden;
+  min-height: 100dvh;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Neo-Brutalist Utility Classes */
+@layer components {
+  .btn-neo-primary {
+    @apply bg-neon-lime text-black font-display font-black px-5 py-3 rounded-xl border-3 border-black
+           shadow-neo transition-all duration-100 select-none cursor-pointer uppercase tracking-wider
+           hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#000]
+           active:translate-x-[4px] active:translate-y-[4px] active:shadow-none;
+  }
+
+  .btn-neo-cyan {
+    @apply bg-neon-cyan text-black font-display font-black px-4 py-2.5 rounded-xl border-2 border-black
+           shadow-neo transition-all duration-100 select-none cursor-pointer uppercase tracking-wider
+           hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_#000]
+           active:translate-x-[3px] active:translate-y-[3px] active:shadow-none;
+  }
+
+  .btn-neo-pink {
+    @apply bg-neon-pink text-white font-display font-black px-4 py-2.5 rounded-xl border-2 border-black
+           shadow-neo transition-all duration-100 select-none cursor-pointer uppercase tracking-wider
+           hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_#000]
+           active:translate-x-[3px] active:translate-y-[3px] active:shadow-none;
+  }
+
+  .card-neo {
+    @apply bg-canvas-card border-3 border-black rounded-2xl shadow-neo p-5;
+  }
+
+  .card-neo-glow {
+    @apply bg-canvas-card border-2 border-black rounded-2xl shadow-[4px_4px_0px_#00F0FF] p-5;
+  }
+
+  .badge-neo {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-black font-mono font-bold text-xs uppercase shadow-neo-sm;
+  }
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0F17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A3048;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
